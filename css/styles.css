@@ -43,14 +43,29 @@ body{
     display: grid;
     place-items: center;
 }
+.account-create-view{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
 
+/*al darme problemas no poder posicionar el title tuve que cambiar este contenedor que es el problema principal*/
+.account-create-view .form-container{
+    display: grid;
+    justify-items: start;
+    grid-template-rows: auto 1fr auto; /*le da el tamanio a cada parte*/
+    width: 350px;
+}
 
 .form-container{
     display: grid;
+    justify-items: center;
     grid-template-rows: auto 1fr auto; /*le da el tamanio a cada parte*/
     width: 350px;
-    justify-items: center;
+   
 }
+
 
 
 .logo{
@@ -79,8 +94,13 @@ body{
 .title{
     font-size: var(--lg);
     margin-bottom: 12px;
-    text-align: center;
+    align-self: center;
 }
+.account-create-view .title{
+    margin-bottom: 45px;
+    margin-top: 10px;
+}
+
 .subtitle{
     color: var(--very-light-pink);
     font-size: var(--md);
@@ -120,6 +140,14 @@ body{
     display: flex;
     flex-direction: column;
 }
+.form div{
+    display: flex;
+    flex-direction: column;
+}
+.account-create-view .form{
+    justify-content: center;
+}
+
 .input{
     background-color: var(--text-input-field);
     border: none;
@@ -134,6 +162,9 @@ body{
 }
 .input-password{
     margin-bottom: 40px;
+}
+.input-name{
+    margin-bottom: 22px;
 }
 
 .primary-button{
@@ -170,9 +201,11 @@ body{
 .login-button{
     margin-bottom: 30px;
 }
-
 .singup-button{
     margin-top: 60px;
+}
+.create-button{
+    margin-bottom: 25px;
 }
 @media(max-width: 640px){
     .logo{
@@ -185,6 +218,14 @@ body{
         margin-top: 0px;
         margin-bottom: 25px;
 
+    }
+
+        /*Esto lo que permite llegue al breakpoint centra el contenido en la pantalla y lleva el boton mas cerca de los demas inputs*/
+    .account-create-view .form-container{
+        height: 100%;
+    }
+    .account-create-view .form{
+        justify-content: space-between;
     }
 }
 
