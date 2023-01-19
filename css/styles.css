@@ -37,18 +37,24 @@ body{
     display: grid;
     place-items: center;
 }
+.login-view{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
 
 
 .form-container{
     display: grid;
     grid-template-rows: auto 1fr auto; /*le da el tamanio a cada parte*/
-    width: 300px;
+    width: 350px;
     justify-items: center;
 }
 
 
 .logo{
-    width: 150px;   /*un tamanio para que se vea mas grande*/
+    width: 210px;   /*un tamanio para que se vea mas grande*/
     margin-bottom: 50px;    /*margen de abajo*/
     justify-self: center;   /*centra en el grid*/
     display: none; /*lo que hace es que no aparezca en pantalla*/
@@ -96,7 +102,13 @@ body{
     color: var(--hospital-green);
     text-decoration: none;
 }
+.form a{
+    font-size: var(--sm);
+    color: var(--hospital-green);
+    text-decoration: none;
 
+    text-align: center;
+}
 
 .label{
     font-size: var(--sm);
@@ -104,6 +116,7 @@ body{
     margin-bottom: 4px;
 }
 .form{
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -111,34 +124,67 @@ body{
     background-color: var(--text-input-field);
     border: none;
     border-radius: 8px;
-    height: 32px;
+    height: 42px;
     font-size: var(--md);
     padding: 6px;
     margin-bottom: 12px;
 }
+.input-email{
+    margin-bottom: 22px;
+}
+.input-password{
+    margin-bottom: 40px;
+}
+
 .primary-button{
     width: 100%;
-    height: 50px;
+    height: 60px;
 
-    font-size: var(--md);
+    font-size: var(--lg);
     font-weight: bold;
-    
-    background-color: var(--hospital-green);
-    color: var(--white);
     border-radius: 8px;
     border: none;
 
+    background-color: var(--hospital-green);
+    color: var(--white);   
+    
     cursor: pointer;
 }
-.login-button{
+.secondary-button{
+    width: 100%;
+    height: 60px;
+    
+    font-size: var(--lg);
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid var(--hospital-green);
+    
+    background-color: var(--white);
+    color: var(--hospital-green);
+    font-weight: 500;
+}
+.reset-button{
     margin-top: 14px;
     margin-bottom: 30px;
 }
+.login-button{
+    margin-bottom: 30px;
+}
 
+.singup-button{
+    margin-top: 60px;
+}
 @media(max-width: 640px){
     .logo{
         display: block;
     }
-    
+    .singup-button{
+        width: 350px;
+        position: absolute;
+        bottom: 0;
+        margin-top: 0px;
+        margin-bottom: 25px;
+
+    }
 }
 
