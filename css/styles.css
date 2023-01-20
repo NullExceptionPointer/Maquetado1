@@ -49,9 +49,21 @@ body{
     display: grid;
     place-items: center;
 }
+.account-edit-view{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
 
 /*al darme problemas no poder posicionar el title tuve que cambiar este contenedor que es el problema principal*/
 .account-create-view .form-container{
+    display: grid;
+    justify-items: start;
+    grid-template-rows: auto 1fr auto; /*le da el tamanio a cada parte*/
+    width: 350px;
+}
+.account-edit-view .form-container{
     display: grid;
     justify-items: start;
     grid-template-rows: auto 1fr auto; /*le da el tamanio a cada parte*/
@@ -97,6 +109,10 @@ body{
     align-self: center;
 }
 .account-create-view .title{
+    margin-bottom: 45px;
+    margin-top: 10px;
+}
+.account-edit-view .title{
     margin-bottom: 45px;
     margin-top: 10px;
 }
@@ -166,6 +182,9 @@ body{
 .input-name{
     margin-bottom: 22px;
 }
+.value{
+    margin-bottom: 30px;
+}
 
 .primary-button{
     width: 100%;
@@ -207,6 +226,9 @@ body{
 .create-button{
     margin-bottom: 25px;
 }
+.edit-button{
+    margin-bottom: 25px;
+}
 @media(max-width: 640px){
     .logo{
         display: block;
@@ -225,6 +247,13 @@ body{
         height: 100%;
     }
     .account-create-view .form{
+        justify-content: space-between;
+    }
+
+    .account-edit-view .form-container{
+        height: 100%;
+    }
+    .account-edit-view .form{
         justify-content: space-between;
     }
 }
