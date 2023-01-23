@@ -347,6 +347,7 @@ body{
 }
 /*----------------------------------------------------------------*/
 
+/*Con esta parte empezamos a estilzar el menu desktop*/
 .desktop-menu{
     width: 100px;
     height: auto;
@@ -381,3 +382,53 @@ body{
     text-decoration: none;
     margin-bottom: 20px;
 }
+
+/*----------------------------------------------------------------*/
+
+/*Con esta parte empezamos a estilzar el menu mobile*/
+.mobile-menu{
+    padding: 24px;
+    height: 100vh;
+}
+
+
+.mobile-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+}
+.mobile-menu ul li{
+    margin-bottom: 24px;
+}
+.mobile-menu ul li a{
+    
+    color: var(--black);
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.mobile-menu .email{
+    font-size: var(--sm);
+    font-weight: 300;
+}
+.mobile-menu .sign-out{
+    color: var(--hospital-green);
+    font-size: var(--sm);
+}
+
+/*el ultimo ul. sus li tiene un margen bot*/
+.mobile-menu ul:nth-child(3) li{
+    margin-bottom: 5px;
+}
+
+/*el primer ul tiene un border abajo solido*/
+.mobile-menu ul:nth-child(1){
+    border-bottom: 1px solid var(--very-light-pink);
+}
+
+/*el ultimo ul empuja al de arriba 200px*/
+.mobile-menu ul:nth-child(3){
+    margin-top: 200px;
+}
+/*----------------------------------------------------------------*/
